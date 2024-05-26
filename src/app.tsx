@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as Toast from "@radix-ui/react-toast";
 import { TierList } from "@/components/tier-list";
+import { TailwindIndicator } from "./components/tailwind-indicator";
 
 function App() {
 	const [isToastOpen, setToastOpen] = useState(false);
@@ -36,6 +37,7 @@ function App() {
 					</Toast.ToastProvider>
 				</div>
 			</div>
+			<TailwindIndicator />
 		</>
 	);
 }
