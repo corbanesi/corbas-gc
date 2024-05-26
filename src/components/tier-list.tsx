@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { PlusIcon } from "@/components/icons/plus-icon";
 import { DefaultTier } from "@/components/default-tier";
 import { Tier } from "@/components/tier";
+import { StorageIcon } from "@/components/icons/storage-icon";
 import { characterData } from "@/utils/character-data";
 import { generateColor, generateId } from "@/utils/generators";
 
@@ -132,19 +133,20 @@ export function TierList() {
 			<div className="flex justify-between">
 				<button
 					type="button"
-					className="flex min-w-28 gap-2 border p-2 transition-colors hover:bg-slate-100 hover:border-slate-400"
+					className="flex min-w-24 gap-2 border p-2 transition-colors rounded-lg stroke-slate-600 hover:bg-slate-50 hover:border-slate-400"
 					onClick={() => createNewTier()}
 				>
 					<PlusIcon />
-					add tier
+					Add tier
 				</button>
 				<div className="flex gap-2">
 					<button
 						type="button"
-						className="min-w-28 border p-2 transition-colors hover:bg-slate-100 hover:border-slate-400"
+						className="flex min-w-24 gap-2 border p-2 transition-colors rounded-lg stroke-slate-600 hover:bg-slate-50 hover:border-slate-400"
 						onClick={() => handleSaveLocal()}
 					>
-						Save local
+						<StorageIcon />
+						Save
 					</button>
 				</div>
 			</div>

@@ -21,7 +21,7 @@ export function DefaultTier(props: Props) {
 	});
 
 	return (
-		<div className="min-h-28 border border-slate-200 bg-slate-50" ref={setNodeRef} {...listeners}>
+		<div className="min-h-28 border rounded-lg border-slate-200 bg-slate-50" ref={setNodeRef} {...listeners}>
 			<div className="flex h-full flex-row flex-wrap justify-center items-center gap-2 p-2">
 				<SortableContext items={characterIdList}>
 					{characters.map((character) => (

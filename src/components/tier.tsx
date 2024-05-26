@@ -36,10 +36,10 @@ export function Tier(props: Props) {
 	return (
 		<div className="flex h-full min-h-32 gap-1" ref={setNodeRef} style={style}>
 			<div
-				className="flex w-28 flex-none flex-col items-center justify-center gap-2 border border-zinc-400 p-2"
+				className="flex w-28 flex-none flex-col items-center justify-center gap-2 rounded-lg p-2"
 				style={{ backgroundColor: tier.color }}
 			>
-				<button className="flex-none cursor-grab active:cursor-grabbing touch-none" {...attributes} {...listeners}>
+				<button className="flex-none cursor-grab active:cursor-grabbing touch-none stroke-slate-900" {...attributes} {...listeners}>
 					<BarIcon />
 				</button>
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: div is not editable at this point*/}
@@ -63,7 +63,7 @@ export function Tier(props: Props) {
 					<TrashIcon />
 				</button>
 			</div>
-			<div className="flex-1 flex-wrap border border-zinc-400 bg-slate-50 hover:bg-slate-100 transition-colors p-2">
+			<div className="flex-1 flex-wrap border bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors p-2">
 				<SortableContext items={characterIdList}>
 					<div className="flex h-full flex-row items-center gap-2 flex-wrap">
 						{characters.map((character) => (
