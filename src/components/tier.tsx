@@ -63,7 +63,7 @@ export function Tier(props: Props) {
 					<TrashIcon />
 				</button>
 			</div>
-			<div className="flex-1 flex-wrap border border-zinc-400 bg-slate-50 p-2">
+			<div className="flex-1 flex-wrap border border-zinc-400 bg-slate-50 hover:bg-slate-100 transition-colors p-2">
 				<SortableContext items={characterIdList}>
 					<div className="flex h-full flex-row items-center gap-2 flex-wrap">
 						{characters.map((character) => (

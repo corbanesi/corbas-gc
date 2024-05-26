@@ -130,12 +130,16 @@ export function TierList() {
 	return (
 		<div className="space-y-2">
 			<div className="flex justify-between">
-				<button type="button" className="flex min-w-28 gap-2 border p-2" onClick={() => createNewTier()}>
+				<button type="button" className="flex min-w-28 gap-2 border p-2 hover:bg-slate-100 hover:border-slate-400" onClick={() => createNewTier()}>
 					<PlusIcon />
 					add tier
 				</button>
 				<div className="flex gap-2">
-					<button type="button" className="min-w-28 border p-2" onClick={() => handleSaveLocal()}>
+					<button
+						type="button"
+						className="min-w-28 border p-2 transition-colors hover:bg-slate-100 hover:border-slate-400"
+						onClick={() => handleSaveLocal()}
+					>
 						Save local
 					</button>
 				</div>
