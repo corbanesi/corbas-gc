@@ -1,11 +1,11 @@
 import { DndContext, type DragEndEvent, type DragOverEvent } from "@dnd-kit/core";
 import { SortableContext, arrayMove } from "@dnd-kit/sortable";
 import { useEffect, useMemo, useState } from "react";
-import { characterData } from "../utils/character-data";
-import { PlusIcon } from "./icons/plus-icon";
-import { DefaultTier } from "./default-tier";
-import { Tier } from "./tier";
-import { generateColor, generateId } from "../utils/generators";
+import { PlusIcon } from "@/components/icons/plus-icon";
+import { DefaultTier } from "@/components/default-tier";
+import { Tier } from "@/components/tier";
+import { characterData } from "@/utils/character-data";
+import { generateColor, generateId } from "@/utils/generators";
 
 const defaultTier: Tier = {
 	id: 12_000,
@@ -130,7 +130,11 @@ export function TierList() {
 	return (
 		<div className="space-y-2">
 			<div className="flex justify-between">
-				<button type="button" className="flex min-w-28 gap-2 border p-2 hover:bg-slate-100 hover:border-slate-400" onClick={() => createNewTier()}>
+				<button
+					type="button"
+					className="flex min-w-28 gap-2 border p-2 transition-colors hover:bg-slate-100 hover:border-slate-400"
+					onClick={() => createNewTier()}
+				>
 					<PlusIcon />
 					add tier
 				</button>

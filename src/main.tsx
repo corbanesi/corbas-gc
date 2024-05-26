@@ -12,5 +12,5 @@ if (root) {
 		</React.StrictMode>,
 	);
 } else {
-	throw new Error("Root not defined")
+	throw new Error("Root not defined");
 }

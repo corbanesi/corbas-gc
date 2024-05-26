@@ -1,9 +1,9 @@
-import { SortableContext, useSortable } from "@dnd-kit/sortable";
-import { TrashIcon } from "./icons/trash-icon";
-import { CSS } from "@dnd-kit/utilities";
-import { BarIcon } from "./icons/bar-icon";
-import { Character } from "./character";
 import { useMemo, useState } from "react";
+import { SortableContext, useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
+import { TrashIcon } from "@/components/icons/trash-icon";
+import { BarIcon } from "@/components/icons/bar-icon";
+import { Character } from "@/components/character";
 
 interface Props {
 	tier: Tier;

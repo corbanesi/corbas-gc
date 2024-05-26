@@ -1,6 +1,6 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { getImageUrl } from "../utils/get-image-url";
+import { getImageUrl } from "@/utils/get-image-url";
 
 interface Props {
 	character: Character;

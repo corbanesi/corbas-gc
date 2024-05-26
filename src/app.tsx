@@ -1,4 +1,4 @@
-import { TierList } from "./components/tier-list";
+import { TierList } from "@/components/tier-list";
 
 function App() {
 	return (

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { Character } from "./character";
 import { SortableContext, useSortable } from "@dnd-kit/sortable";
+import { Character } from "@/components/character";
 
 interface Props {
 	tier: Tier;
