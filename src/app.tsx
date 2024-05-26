@@ -18,7 +18,8 @@ function App() {
 
 	return (
 		<>
-			<div className="flex min-h-screen px-2 container mx-auto">
+			<div className="container mx-auto px-2 md:px-0 text-right text-sm py-2">v{APP_VERSION}</div>
+			<div className="flex min-h-screen px-2 md:px-0 container mx-auto">
 				<div className="w-full py-2">
 					<Toast.ToastProvider swipeDirection="right">
 						<TierList setToastOpen={setToastOpen} />

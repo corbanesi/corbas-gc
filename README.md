@@ -22,3 +22,10 @@ Format the code following the rules defined in ``biome.json``
 
 #### `pnpm run biome:lint`
 Lint the code following the rules defined in ``biome.json``
+
+### Features
+
+- [✔] Base sortable tier list
+- [✔] Save in browser local storage
+- [✔] Load from browser local storage
+- [✔] Load new versions of character data

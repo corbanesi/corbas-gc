@@ -29,12 +29,30 @@ export function TierList(props: Props) {
 	const [characterList, setCharacterList] = useState<Character[]>(characterData);
 
 	useEffect(() => {
+		const localAppVersion = localStorage.getItem("appVersion");
 		const localTierList = localStorage.getItem("tierList");
 		const localCharacterList = localStorage.getItem("characterList");
 
-		if (localTierList && localCharacterList) {
-			setTierList(JSON.parse(localTierList));
-			setCharacterList(JSON.parse(localCharacterList));
+		if (!localAppVersion) {
+			localStorage.setItem("appVersion", APP_VERSION);
+		} else {
+			if (localTierList && localCharacterList) {
+				if (localAppVersion.localeCompare(APP_VERSION, undefined, { numeric: true }) === -1) {
+					const previousCharacterList = JSON.parse(localCharacterList) as Character[];
+
+					const charactersMissing = characterData.filter(
+						(data) => !previousCharacterList.some((oldCharacter) => data.id === oldCharacter.id),
+					);
+
+					setTierList(JSON.parse(localTierList));
+					setCharacterList([...JSON.parse(localCharacterList), ...charactersMissing]);
+
+					localStorage.setItem("appVersion", APP_VERSION);
+				} else {
+					setTierList(JSON.parse(localTierList));
+					setCharacterList(JSON.parse(localCharacterList));
+				}
+			}
 		}
 
 		return () => clearTimeout(timerRef.current);
