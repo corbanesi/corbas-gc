@@ -1,6 +1,6 @@
 import { DndContext, type DragEndEvent, type DragOverEvent } from "@dnd-kit/core";
 import { SortableContext, arrayMove } from "@dnd-kit/sortable";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { PlusIcon } from "@/components/icons/plus-icon";
 import { DefaultTier } from "@/components/default-tier";
 import { Tier } from "@/components/tier";
@@ -14,7 +14,15 @@ const defaultTier: Tier = {
 	color: generateColor(),
 };
 
-export function TierList() {
+interface Props {
+	setToastOpen: (value: boolean) => void;
+}
+
+export function TierList(props: Props) {
+	const { setToastOpen } = props;
+
+	const timerRef = useRef(0);
+
 	const [tierList, setTierList] = useState<Tier[]>([]);
 	const tierIdList = useMemo(() => tierList.map((tier) => tier.id), [tierList]);
 
@@ -28,6 +36,8 @@ export function TierList() {
 			setTierList(JSON.parse(localTierList));
 			setCharacterList(JSON.parse(localCharacterList));
 		}
+
+		return () => clearTimeout(timerRef.current);
 	}, []);
 
 	function createNewTier() {
@@ -42,6 +52,12 @@ export function TierList() {
 	function handleSaveLocal() {
 		localStorage.setItem("tierList", JSON.stringify(tierList));
 		localStorage.setItem("characterList", JSON.stringify(characterList));
+		setToastOpen(false);
+
+		window.clearTimeout(timerRef.current);
+		timerRef.current = window.setTimeout(() => {
+			setToastOpen(true);
+		}, 100);
 	}
 
 	function handleDeleteTier(id: Id): void {
