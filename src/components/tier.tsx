@@ -39,7 +39,7 @@ export function Tier(props: Props) {
 				className="flex w-28 flex-none flex-col items-center justify-center gap-2 border border-zinc-400 p-2"
 				style={{ backgroundColor: tier.color }}
 			>
-				<button className="flex-none cursor-grab active:cursor-grabbing" {...attributes} {...listeners}>
+				<button className="flex-none cursor-grab active:cursor-grabbing touch-none" {...attributes} {...listeners}>
 					<BarIcon />
 				</button>
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: div is not editable at this point*/}
