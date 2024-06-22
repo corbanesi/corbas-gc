@@ -34,7 +34,7 @@ export function Tier(props: Props) {
 	};
 
 	return (
-		<div className="flex h-full min-h-32 gap-1" ref={setNodeRef} style={style}>
+		<div className="flex h-full min-h-32 gap-1" ref={setNodeRef} style={style} id={`tier-${tier.id}`}>
 			<div
 				className="flex w-28 flex-none flex-col items-center justify-center gap-2 rounded-lg p-2"
 				style={{ backgroundColor: tier.color }}

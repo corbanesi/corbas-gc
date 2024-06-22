@@ -29,35 +29,49 @@ export function TierList(props: Props) {
 	const [characterList, setCharacterList] = useState<Character[]>(characterData);
 
 	useEffect(() => {
-		const localAppVersion = localStorage.getItem("appVersion");
-		const localTierList = localStorage.getItem("tierList");
-		const localCharacterList = localStorage.getItem("characterList");
-
-		if (!localAppVersion) {
-			localStorage.setItem("appVersion", APP_VERSION);
-		} else {
-			if (localTierList && localCharacterList) {
-				if (localAppVersion.localeCompare(APP_VERSION, undefined, { numeric: true }) === -1) {
-					const previousCharacterList = JSON.parse(localCharacterList) as Character[];
-
-					const charactersMissing = characterData.filter(
-						(data) => !previousCharacterList.some((oldCharacter) => data.id === oldCharacter.id),
-					);
-
-					setTierList(JSON.parse(localTierList));
-					setCharacterList([...JSON.parse(localCharacterList), ...charactersMissing]);
-
-					localStorage.setItem("appVersion", APP_VERSION);
-				} else {
-					setTierList(JSON.parse(localTierList));
-					setCharacterList(JSON.parse(localCharacterList));
-				}
-			}
-		}
-
-		return () => clearTimeout(timerRef.current);
+		loadLocalTierList();
+		loadLocalCharacterList();
 	}, []);
 
+	function loadLocalTierList() {
+		const localTierList = localStorage.getItem("tierList");
+
+		if (localTierList) {
+			setTierList(JSON.parse(localTierList));
+		}
+	}
+
+	function loadLocalCharacterList() {
+		const strLocalCharacterList = localStorage.getItem("characterList");
+
+		if (strLocalCharacterList) {
+			console.log("encontrou char list no storage")
+
+			const characterListFromLocalhost = JSON.parse(strLocalCharacterList) as Character[];
+			console.log(characterListFromLocalhost.length)
+			const charactersList = characterData.map(character => {
+				const char = characterListFromLocalhost.find(from => from.id === character.id);
+				if (char) {
+					return {
+						id: char.id,
+						name: character.name,
+						image: character.image,
+						tierId: char.tierId
+					}
+				}
+				return character
+			})
+
+			setCharacterList([...charactersList]);
+
+		}
+	}
+
+	/**
+	 * 
+	 * Create new tier
+	 * 
+	 * */
 	function createNewTier() {
 		const newTier: Tier = {
 			id: generateId(),
@@ -67,9 +81,24 @@ export function TierList(props: Props) {
 		setTierList([...tierList, newTier]);
 	}
 
+	/**
+	 *
+	 * Saves lists in localstorage
+	 *  
+	 * */
 	function handleSaveLocal() {
 		localStorage.setItem("tierList", JSON.stringify(tierList));
-		localStorage.setItem("characterList", JSON.stringify(characterList));
+		const strCharacterList = JSON.stringify(
+			characterList
+				.filter(data => data.tierId !== 12_000)
+				.map(data => {
+					return {
+						id: data.id, tierId: data.tierId
+					}
+				})
+		);
+
+		localStorage.setItem("characterList", strCharacterList);
 		setToastOpen(false);
 
 		window.clearTimeout(timerRef.current);
@@ -78,6 +107,11 @@ export function TierList(props: Props) {
 		}, 100);
 	}
 
+	/**
+	 *
+	 * Deletes tier
+	 *  
+	 * */
 	function handleDeleteTier(id: Id): void {
 		const filteredTierList = tierList.filter((tier) => tier.id !== id);
 
@@ -93,6 +127,11 @@ export function TierList(props: Props) {
 		setTierList(filteredTierList);
 	}
 
+	/**
+	 *
+	 * Updates tier title
+	 *  
+	 * */
 	function handleUpdateTierTitle(id: Id, title: string) {
 		const newTierList = tierList.map((tier) => {
 			if (tier.id !== id) return tier;
@@ -102,6 +141,11 @@ export function TierList(props: Props) {
 		setTierList(newTierList);
 	}
 
+	/**
+	 *
+	 * Handle drag end event
+	 *  
+	 * */
 	function handleDragEnd(event: DragEndEvent) {
 		const { active, over } = event;
 		if (!over) return;
@@ -122,6 +166,11 @@ export function TierList(props: Props) {
 		});
 	}
 
+	/**
+	 *
+	 * Handle drag over event
+	 *  
+	 * */
 	function handleDragOver(event: DragOverEvent) {
 		const { active, over } = event;
 		if (!over) return;
