@@ -92,7 +92,7 @@ export const characterData: Character[] = [
 	{
 		id: 11_016,
 		name: "Lire (T)",
-		image: "https://static.wikia.nocookie.net/grandchase/images/a/ad/Another-Elesis-Hyper.png",
+		image: "https://static.wikia.nocookie.net/grandchase/images/4/4e/Another-Lire-Hyper.png",
 		tierId: 12_000,
 	},
 	{
@@ -405,6 +405,24 @@ export const characterData: Character[] = [
 		id: 11_068,
 		name: "Lupus (T)",
 		image: "https://static.wikia.nocookie.net/grandchase/images/1/1f/Another-Lupus-Hyper.png",
+		tierId: 12_000,
+	},
+	{
+		id: 11_069,
+		name: "Veigas (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/1/17/Another-Veigas-Hyper.png",
+		tierId: 12_000,
+	},
+	{
+		id: 11_070,
+		name: "Nelia (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/3/38/Another-Nelia-Hyper.png",
+		tierId: 12_000,
+	},
+	{
+		id: 11_071,
+		name: "Asin (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/e/eb/Another-Azin-Hyper.png",
 		tierId: 12_000,
 	},
 ];
