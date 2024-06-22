@@ -409,18 +409,12 @@ export const characterData: Character[] = [
 	},
 	{
 		id: 11_069,
-		name: "Veigas (T)",
-		image: "https://static.wikia.nocookie.net/grandchase/images/1/17/Another-Veigas-Hyper.png",
-		tierId: 12_000,
-	},
-	{
-		id: 11_070,
 		name: "Nelia (T)",
 		image: "https://static.wikia.nocookie.net/grandchase/images/3/38/Another-Nelia-Hyper.png",
 		tierId: 12_000,
 	},
 	{
-		id: 11_071,
+		id: 11_070,
 		name: "Asin (T)",
 		image: "https://static.wikia.nocookie.net/grandchase/images/e/eb/Another-Azin-Hyper.png",
 		tierId: 12_000,
