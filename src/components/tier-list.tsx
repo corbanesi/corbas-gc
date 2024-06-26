@@ -6,7 +6,7 @@ import { DefaultTier } from "@/components/default-tier";
 import { Tier } from "@/components/tier";
 import { StorageIcon } from "@/components/icons/storage-icon";
 import { characterData } from "@/utils/character-data";
-import { typeData, tierData } from "@/utils/data";
+import { typeData, tierData, attrData } from "@/utils/data";
 import { generateColor, generateId } from "@/utils/generators";
 
 const defaultTier: Tier = {
@@ -276,7 +276,7 @@ export function TierList(props: Props) {
 						</div>
 					))}
 				</div>
-				{/* 
+				{
 				<div className="col-span-2 flex gap-2 align-middle">
 					{
 						attrData.map(attr =>
@@ -292,7 +292,7 @@ export function TierList(props: Props) {
 						)
 					}
 				</div>
-				*/}
+				}
 			</div>
 			<DndContext onDragEnd={onDragEnd} onDragOver={onDragOver}>
 				<div className="flex flex-col gap-2">
