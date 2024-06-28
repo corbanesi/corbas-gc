@@ -6,6 +6,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "SR",
+		attr: "judgment"
 	},
 	{
 		id: 11_002,
@@ -14,6 +15,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_004,
@@ -22,6 +24,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_003,
@@ -30,6 +33,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_005,
@@ -38,6 +42,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_006,
@@ -46,6 +51,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_007,
@@ -54,6 +60,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_008,
@@ -62,6 +69,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_009,
@@ -70,6 +78,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "SR",
+		attr: "judgment"
 	},
 	{
 		id: 11_010,
@@ -78,6 +87,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_011,
@@ -86,6 +96,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_012,
@@ -94,6 +105,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_013,
@@ -102,6 +114,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "judgment"
 	},
 	{
 		id: 11_014,
@@ -110,6 +123,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_015,
@@ -118,6 +132,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "T",
+		attr: "life"
 	},
 	{
 		id: 11_016,
@@ -126,6 +141,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_017,
@@ -134,6 +150,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "judgment"
 	},
 	{
 		id: 11_018,
@@ -142,6 +159,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_019,
@@ -150,6 +168,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "T",
+		attr: "cycles"
 	},
 	{
 		id: 11_020,
@@ -158,6 +177,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_021,
@@ -166,6 +186,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_022,
@@ -174,6 +195,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "T",
+		attr: "life"
 	},
 	{
 		id: 11_023,
@@ -182,6 +204,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_024,
@@ -190,6 +213,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "judgment"
 	},
 	{
 		id: 11_025,
@@ -198,6 +222,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "life"
 	},
 	{
 		id: 11_026,
@@ -206,6 +231,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_027,
@@ -214,6 +240,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_028,
@@ -222,6 +249,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "life"
 	},
 	{
 		id: 11_029,
@@ -230,6 +258,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "T",
+		attr: "destruction"
 	},
 	{
 		id: 11_030,
@@ -238,6 +267,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_031,
@@ -246,14 +276,16 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_032,
-		name: "Azin",
+		name: "Asin",
 		image: "https://static.wikia.nocookie.net/grandchase/images/5/53/IconHero-Azin-Hyper.png",
 		tierId: 12_000,
 		type: "tank",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_033,
@@ -262,6 +294,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "destruction"
 	},
 	{
 		id: 11_034,
@@ -270,6 +303,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_035,
@@ -278,6 +312,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "destruction"
 	},
 	{
 		id: 11_036,
@@ -286,6 +321,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "destruction"
 	},
 	{
 		id: 11_037,
@@ -294,6 +330,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_038,
@@ -302,6 +339,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_039,
@@ -310,6 +348,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_040,
@@ -318,6 +357,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_041,
@@ -326,6 +366,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_042,
@@ -334,6 +375,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_043,
@@ -342,6 +384,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "T",
+		attr: "destruction"
 	},
 	{
 		id: 11_044,
@@ -350,6 +393,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "SR",
+		attr: "judgment"
 	},
 	{
 		id: 11_045,
@@ -358,6 +402,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_046,
@@ -366,6 +411,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_047,
@@ -374,6 +420,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_048,
@@ -382,6 +429,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_049,
@@ -390,6 +438,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "SR",
+		attr: "destruction"
 	},
 	{
 		id: 11_050,
@@ -398,6 +447,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_051,
@@ -406,6 +456,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_052,
@@ -414,6 +465,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "T",
+		attr: "life"
 	},
 	{
 		id: 11_053,
@@ -422,6 +474,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_054,
@@ -430,6 +483,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "SR",
+		attr: "judgment"
 	},
 	{
 		id: 11_055,
@@ -438,6 +492,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_056,
@@ -446,6 +501,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "T",
+		attr: "life"
 	},
 	{
 		id: 11_057,
@@ -454,6 +510,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_058,
@@ -462,6 +519,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_059,
@@ -470,6 +528,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_060,
@@ -478,6 +537,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_061,
@@ -486,6 +546,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "tank",
 		tier: "SR",
+		attr: "destruction"
 	},
 	{
 		id: 11_062,
@@ -494,6 +555,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "SR",
+		attr: "hellfire"
 	},
 	{
 		id: 11_063,
@@ -502,6 +564,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_064,
@@ -510,6 +573,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "T",
+		attr: "judgment"
 	},
 	{
 		id: 11_065,
@@ -518,6 +582,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_066,
@@ -526,6 +591,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "SR",
+		attr: "cycles"
 	},
 	{
 		id: 11_067,
@@ -534,6 +600,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "ranged",
 		tier: "SR",
+		attr: "life"
 	},
 	{
 		id: 11_068,
@@ -542,6 +609,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "mage",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_069,
@@ -550,6 +618,7 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "support",
 		tier: "T",
+		attr: "hellfire"
 	},
 	{
 		id: 11_070,
@@ -558,5 +627,6 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
+		attr: "cycles"
 	},
 ];

@@ -13,7 +13,7 @@ type Character = {
 	tierId: Id;
 	type: CharType;
 	tier: CharTier;
-	attr?: CharAttr;
+	attr: CharAttr;
 };
 
 type CharType = "assault" | "tank" | "mage" | "support" | "ranged";
