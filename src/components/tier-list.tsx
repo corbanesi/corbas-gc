@@ -251,8 +251,9 @@ export function TierList(props: Props) {
 						<div key={tier.id} className="flex align-middle">
 							<button type="button" className="group" onClick={() => updateTierFilter(tier.name)}>
 								<img
-									className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${tierFilter.includes(tier.name) ? "active" : ""
-										}`}
+									className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${
+										tierFilter.includes(tier.name) ? "active" : ""
+									}`}
 									src={tier.img}
 									alt={tier.desc}
 								/>
@@ -265,8 +266,9 @@ export function TierList(props: Props) {
 						<div key={type.id} className="flex align-middle">
 							<button type="button" className="group" onClick={() => updateCharTypeFilter(type.name)}>
 								<img
-									className={`w-9 p-1 group-hover:bg-slate-100 no- transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${typeFilter.includes(type.name) ? "active" : ""
-										}`}
+									className={`w-9 p-1 group-hover:bg-slate-100 no- transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${
+										typeFilter.includes(type.name) ? "active" : ""
+									}`}
 									src={type.img}
 									alt={type.desc}
 								/>
@@ -276,19 +278,19 @@ export function TierList(props: Props) {
 				</div>
 				{
 					<div className="col-span-2 flex gap-2 align-middle">
-						{
-							attrData.map(attr =>
-								<div key={attr.id} className="flex align-middle">
-									<button type="button" className="group" onClick={() => updateAttrFilter(attr.name)}>
-										<img
-											className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${attrFilter.includes(attr.name) ? "active" : ""}`}
-											src={attr.img}
-											alt={attr.desc}
-										/>
-									</button>
-								</div>
-							)
-						}
+						{attrData.map((attr) => (
+							<div key={attr.id} className="flex align-middle">
+								<button type="button" className="group" onClick={() => updateAttrFilter(attr.name)}>
+									<img
+										className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${
+											attrFilter.includes(attr.name) ? "active" : ""
+										}`}
+										src={attr.img}
+										alt={attr.desc}
+									/>
+								</button>
+							</div>
+						))}
 					</div>
 				}
 			</div>
@@ -303,7 +305,10 @@ export function TierList(props: Props) {
 								updateTierTitle={updateTierTitle}
 								characters={characterList.filter(
 									(character) =>
-										character.tierId === tier.id && typeFilter.includes(character.type) && tierFilter.includes(character.tier) && attrFilter.includes(character.attr),
+										character.tierId === tier.id &&
+										typeFilter.includes(character.type) &&
+										tierFilter.includes(character.tier) &&
+										attrFilter.includes(character.attr),
 								)}
 							/>
 						))}
@@ -313,7 +318,10 @@ export function TierList(props: Props) {
 					tier={defaultTier}
 					characters={characterList.filter(
 						(character) =>
-							character.tierId === 12_000 && typeFilter.includes(character.type) && tierFilter.includes(character.tier) && attrFilter.includes(character.attr),
+							character.tierId === 12_000 &&
+							typeFilter.includes(character.type) &&
+							tierFilter.includes(character.tier) &&
+							attrFilter.includes(character.attr),
 					)}
 				/>
 			</DndContext>

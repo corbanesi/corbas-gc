@@ -23,7 +23,7 @@ export function Character(props: Props) {
 	};
 
 	return (
-		<div >
+		<div>
 			<img
 				{...attributes}
 				{...listeners}
