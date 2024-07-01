@@ -627,6 +627,6 @@ export const characterData: Character[] = [
 		tierId: 12_000,
 		type: "assault",
 		tier: "T",
-		attr: "cycles",
+		attr: "destruction",
 	},
 ];
