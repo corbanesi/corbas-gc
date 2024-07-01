@@ -23,7 +23,7 @@ export function Character(props: Props) {
 	};
 
 	return (
-		<div>
+		<div className="touch-none">
 			<img
 				{...attributes}
 				{...listeners}
@@ -33,12 +33,12 @@ export function Character(props: Props) {
 				src={character.image}
 				alt={character.name}
 				title={character.name}
-				className="h-20 w-20 md:h-24 md:w-24 touch-none border border-slate-400 bg-slate-50"
+				className="h-16 w-16 md:h-24 md:w-24 print:w-16 print:h-16 touch-none border border-slate-400 bg-slate-50"
 			/>
 			<div className="flex gap-1 justify-center pt-1">
-				<img src={attrData.find((attr) => attr.name === character.attr)?.img} className="h-6 w-6" alt="char attr" />
-				<img src={tierData.find((tier) => tier.name === character.tier)?.img} className="h-6 w-6" alt="char tier" />
-				<img src={typeData.find((type) => type.name === character.type)?.img} className="h-6 w-6" alt="char type" />
+				<img src={attrData.find((attr) => attr.name === character.attr)?.img} className="h-6 w-6 print:h-4 print:w-4" alt="char attr" />
+				<img src={tierData.find((tier) => tier.name === character.tier)?.img} className="h-6 w-6 print:h-4 print:w-4" alt="char tier" />
+				<img src={typeData.find((type) => type.name === character.type)?.img} className="h-6 w-6 print:h-4 print:w-4" alt="char type" />
 			</div>
 		</div>
 	);

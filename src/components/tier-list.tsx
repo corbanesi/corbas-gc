@@ -223,9 +223,31 @@ export function TierList(props: Props) {
 		}
 	}
 
+	function characterListFilter(tierId: Id) {
+		return characterList.filter((character) => {
+			if (character.tierId !== tierId) {
+				return false;
+			}
+
+			if (!typeFilter.includes(character.type)) {
+				return false;
+			}
+
+			if (!tierFilter.includes(character.tier)) {
+				return false;
+			}
+
+			if (!attrFilter.includes(character.attr)) {
+				return false;
+			}
+
+			return true;
+		});
+	}
+
 	return (
 		<div className="space-y-4">
-			<div className="flex justify-between">
+			<div className="flex justify-between print:hidden">
 				<button
 					type="button"
 					className="flex min-w-24 gap-2 border p-2 transition-colors rounded-lg stroke-slate-600 hover:bg-slate-50 hover:border-slate-400"
@@ -245,7 +267,7 @@ export function TierList(props: Props) {
 					</button>
 				</div>
 			</div>
-			<div className="grid md:grid-cols-10 gap-2 align-middle bg-slate-100 p-2">
+			<div className="grid md:grid-cols-10 gap-2 align-middle bg-slate-100 p-2 print:hidden">
 				<div className="col-span-1 flex gap-2 align-middle">
 					{tierData.map((tier) => (
 						<div key={tier.id} className="flex align-middle">
@@ -303,27 +325,12 @@ export function TierList(props: Props) {
 								tier={tier}
 								deleteTier={deleteTier}
 								updateTierTitle={updateTierTitle}
-								characters={characterList.filter(
-									(character) =>
-										character.tierId === tier.id &&
-										typeFilter.includes(character.type) &&
-										tierFilter.includes(character.tier) &&
-										attrFilter.includes(character.attr),
-								)}
+								characters={characterListFilter(tier.id)}
 							/>
 						))}
 					</SortableContext>
 				</div>
-				<DefaultTier
-					tier={defaultTier}
-					characters={characterList.filter(
-						(character) =>
-							character.tierId === 12_000 &&
-							typeFilter.includes(character.type) &&
-							tierFilter.includes(character.tier) &&
-							attrFilter.includes(character.attr),
-					)}
-				/>
+				<DefaultTier tier={defaultTier} characters={characterListFilter(12_000)} />
 			</DndContext>
 		</div>
 	);

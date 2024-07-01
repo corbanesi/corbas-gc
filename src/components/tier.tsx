@@ -40,7 +40,7 @@ export function Tier(props: Props) {
 				style={{ backgroundColor: tier.color }}
 			>
 				<button
-					className="flex-none cursor-grab active:cursor-grabbing touch-none stroke-slate-900"
+					className="flex-none cursor-grab active:cursor-grabbing touch-none stroke-slate-900 print:hidden"
 					{...attributes}
 					{...listeners}
 				>
@@ -63,7 +63,7 @@ export function Tier(props: Props) {
 						)}
 					</div>
 				</div>
-				<button type="button" onClick={() => deleteTier(tier.id)}>
+				<button type="button" onClick={() => deleteTier(tier.id)} className="print:hidden">
 					<TrashIcon />
 				</button>
 			</div>
