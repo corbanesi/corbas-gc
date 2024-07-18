@@ -33,12 +33,12 @@ export function Character(props: Props) {
 				src={character.image}
 				alt={character.name}
 				title={character.name}
-				className="h-16 w-16 md:h-24 md:w-24 print:w-16 print:h-16 touch-none border border-slate-400 bg-slate-50"
+				className="h-16 w-16 md:h-20 md:w-20 2xl:h-24 2xl:w-24 print:w-16 print:h-16 touch-none border border-slate-400 bg-slate-50"
 			/>
-			<div className="flex gap-1 justify-center pt-1">
-				<img src={attrData.find((attr) => attr.name === character.attr)?.img} className="h-4 w-4 md:h-6 md:w-6 print:h-4 print:w-4" alt="char attr" />
-				<img src={tierData.find((tier) => tier.name === character.tier)?.img} className="h-4 w-4 md:h-6 md:w-6 print:h-4 print:w-4" alt="char tier" />
-				<img src={typeData.find((type) => type.name === character.type)?.img} className="h-4 w-4 md:h-6 md:w-6 print:h-4 print:w-4" alt="char type" />
+			<div className="flex gap-1 justify-center pt-1 print:hidden">
+				<img src={attrData.find((attr) => attr.name === character.attr)?.img} className="h-4 w-4 md:h-5 md:w-5 2xl:h-6 2xl:w-6 print:h-4 print:w-4" alt="char attr" />
+				<img src={tierData.find((tier) => tier.name === character.tier)?.img} className="h-4 w-4 md:h-5 md:w-5 2xl:h-6 2xl:w-6 print:h-4 print:w-4" alt="char tier" />
+				<img src={typeData.find((type) => type.name === character.type)?.img} className="h-4 w-4 md:h-5 md:w-5 2xl:h-6 2xl:w-6 print:h-4 print:w-4" alt="char type" />
 			</div>
 		</div>
 	);

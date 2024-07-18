@@ -8,12 +8,19 @@ import { StorageIcon } from "@/components/icons/storage-icon";
 import { characterData } from "@/utils/character-data";
 import { typeData, tierData, attrData } from "@/utils/data";
 import { generateColor, generateId } from "@/utils/generators";
+import { TrashIcon } from "./icons/trash-icon";
 
 const defaultTier: Tier = {
 	id: 12_000,
 	title: "Not a Tier",
 	color: generateColor(),
 };
+
+const emptyTier: Tier = {
+	id: 1,
+	title: "Empty",
+	color: "#4ADE80"
+}
 
 interface Props {
 	setToastOpen: (value: boolean) => void;
@@ -24,7 +31,7 @@ export function TierList(props: Props) {
 
 	const timerRef = useRef(0);
 
-	const [tierList, setTierList] = useState<Tier[]>([]);
+	const [tierList, setTierList] = useState<Tier[]>([emptyTier]);
 	const tierIdList = useMemo(() => tierList.map((tier) => tier.id), [tierList]);
 
 	const [characterList, setCharacterList] = useState<Character[]>(characterData);
@@ -245,17 +252,37 @@ export function TierList(props: Props) {
 		});
 	}
 
+	function resetBoard() {
+		setCharacterList((characters) => {
+			return characters.map((character) => {
+				if (character.tierId !== 12_000) {
+					character.tierId = 12_000;
+				}
+				return character;
+			});
+		});
+		
+		setTierList([emptyTier]);
+	}
+
 	return (
 		<div className="space-y-4">
 			<div className="flex justify-between print:hidden">
-				<button
-					type="button"
-					className="flex min-w-24 gap-2 border p-2 transition-colors rounded-lg stroke-slate-600 hover:bg-slate-50 hover:border-slate-400"
-					onClick={() => createNewTier()}
-				>
-					<PlusIcon />
-					Add tier
-				</button>
+				<div className="flex gap-2">
+					<button
+						type="button"
+						className="flex min-w-24 gap-2 border p-2 transition-colors rounded-lg stroke-slate-600 hover:bg-slate-50 hover:border-slate-400"
+						onClick={() => createNewTier()}
+					>
+						<PlusIcon />
+						Add tier
+					</button>
+					<button type="button" className="flex min-w-24 gap-2 border p-2 transition-colors rounded-lg stroke-slate-600 hover:bg-slate-50 hover:border-slate-400" onClick={() => resetBoard()}>
+						<TrashIcon />
+						Reset board
+					</button>
+
+				</div>
 				<div className="flex gap-2">
 					<button
 						type="button"
@@ -273,9 +300,8 @@ export function TierList(props: Props) {
 						<div key={tier.id} className="flex align-middle">
 							<button type="button" className="group" onClick={() => updateTierFilter(tier.name)}>
 								<img
-									className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${
-										tierFilter.includes(tier.name) ? "active" : ""
-									}`}
+									className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${tierFilter.includes(tier.name) ? "active" : ""
+										}`}
 									src={tier.img}
 									alt={tier.desc}
 								/>
@@ -288,9 +314,8 @@ export function TierList(props: Props) {
 						<div key={type.id} className="flex align-middle">
 							<button type="button" className="group" onClick={() => updateCharTypeFilter(type.name)}>
 								<img
-									className={`w-9 p-1 group-hover:bg-slate-100 no- transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${
-										typeFilter.includes(type.name) ? "active" : ""
-									}`}
+									className={`w-9 p-1 group-hover:bg-slate-100 no- transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${typeFilter.includes(type.name) ? "active" : ""
+										}`}
 									src={type.img}
 									alt={type.desc}
 								/>
@@ -304,9 +329,8 @@ export function TierList(props: Props) {
 							<div key={attr.id} className="flex align-middle">
 								<button type="button" className="group" onClick={() => updateAttrFilter(attr.name)}>
 									<img
-										className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${
-											attrFilter.includes(attr.name) ? "active" : ""
-										}`}
+										className={`w-9 p-1 group-hover:bg-slate-100 transition-colors rounded-lg [&.active]:border [&.active]:bg-white ${attrFilter.includes(attr.name) ? "active" : ""
+											}`}
 										src={attr.img}
 										alt={attr.desc}
 									/>
