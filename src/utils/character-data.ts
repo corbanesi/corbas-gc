@@ -629,4 +629,13 @@ export const characterData: Character[] = [
 		tier: "T",
 		attr: "destruction",
 	},
+	{
+		id: 11_071,
+		name: "Arme (S)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/3/38/IconHero-Armx-Hyper.png",
+		tierId: 12_000,
+		type: "mage",
+		tier: "SR",
+		attr: "judgment",
+	}
 ];
