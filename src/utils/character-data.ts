@@ -637,5 +637,14 @@ export const characterData: Character[] = [
 		type: "mage",
 		tier: "SR",
 		attr: "judgment",
-	}
+	},
+	{
+		id: 11_072,
+		name: "Deia",
+		image: "https://static.wikia.nocookie.net/grandchase/images/e/ef/IconHero-Deia-Hyper.png",
+		tierId: 12_000,
+		type: "ranged",
+		tier: "SR",
+		attr: "cycles",
+	},
 ];
