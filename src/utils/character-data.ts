@@ -647,4 +647,13 @@ export const characterData: Character[] = [
 		tier: "SR",
 		attr: "cycles",
 	},
+	{
+		id: 11_073,
+		name: "Tia (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/a/ae/Another-Tia-Hyper.png",
+		tierId: 12_000,
+		type: "assault",
+		tier: "T",
+		attr: "hellfire",
+	},
 ];
