@@ -82,7 +82,7 @@ export const characterData: Character[] = [
 	},
 	{
 		id: 11_010,
-		name: "Kalisto (T)",
+		name: "Callisto (T)",
 		image: "https://static.wikia.nocookie.net/grandchase/images/5/58/Another-Kalisto-Hyper.png",
 		tierId: 12_000,
 		type: "tank",
@@ -127,7 +127,7 @@ export const characterData: Character[] = [
 	},
 	{
 		id: 11_015,
-		name: "Lin (T)",
+		name: "Rin (T)",
 		image: "https://static.wikia.nocookie.net/grandchase/images/c/c6/Another-Lin-Hyper.png",
 		tierId: 12_000,
 		type: "mage",
@@ -145,7 +145,7 @@ export const characterData: Character[] = [
 	},
 	{
 		id: 11_017,
-		name: "Lupus",
+		name: "Rufus",
 		image: "https://static.wikia.nocookie.net/grandchase/images/d/db/IconHero-Lupus-Hyper.png",
 		tierId: 12_000,
 		type: "ranged",
@@ -415,7 +415,7 @@ export const characterData: Character[] = [
 	},
 	{
 		id: 11_047,
-		name: "Kalisto",
+		name: "Callisto",
 		image: "https://static.wikia.nocookie.net/grandchase/images/7/7b/IconHero-Kalisto-Hyper.png",
 		tierId: 12_000,
 		type: "assault",
@@ -586,7 +586,7 @@ export const characterData: Character[] = [
 	},
 	{
 		id: 11_066,
-		name: "Lin",
+		name: "Rin",
 		image: "https://static.wikia.nocookie.net/grandchase/images/d/dc/IconHero-Lin-Hyper.png",
 		tierId: 12_000,
 		type: "support",
@@ -604,7 +604,7 @@ export const characterData: Character[] = [
 	},
 	{
 		id: 11_068,
-		name: "Lupus (T)",
+		name: "Rufus (T)",
 		image: "https://static.wikia.nocookie.net/grandchase/images/1/1f/Another-Lupus-Hyper.png",
 		tierId: 12_000,
 		type: "mage",
