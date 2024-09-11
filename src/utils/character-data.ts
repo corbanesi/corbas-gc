@@ -656,4 +656,14 @@ export const characterData: Character[] = [
 		tier: "T",
 		attr: "hellfire",
 	},
+	
+	{
+		id: 11_074,
+		name: "Ryan (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/f/f1/Another-Ryan-Hyper.png",
+		tierId: 12_000,
+		type: "mage",
+		tier: "T",
+		attr: "hellfire",
+	},
 ];
