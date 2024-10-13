@@ -656,7 +656,6 @@ export const characterData: Character[] = [
 		tier: "T",
 		attr: "hellfire",
 	},
-	
 	{
 		id: 11_074,
 		name: "Ryan (T)",
@@ -665,5 +664,23 @@ export const characterData: Character[] = [
 		type: "mage",
 		tier: "T",
 		attr: "hellfire",
+	},
+	{
+		id: 11_075,
+		name: "Urara",
+		image: "https://static.wikia.nocookie.net/grandchase/images/4/4d/IconHero-Urara-Hyper.png",
+		tierId: 12_000,
+		type: "support",
+		tier: "SR",
+		attr: "life",
+	},
+	{
+		id: 11_076,
+		name: "Ganymede (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/7/73/Another-Ganymede-Hyper.png",
+		tierId: 12_000,
+		type: "ranged",
+		tier: "T",
+		attr: "judgment",
 	},
 ];
