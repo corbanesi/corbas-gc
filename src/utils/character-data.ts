@@ -683,4 +683,13 @@ export const characterData: Character[] = [
 		tier: "T",
 		attr: "judgment",
 	},
+	{
+		id: 11_077,
+		name: "Dio (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/b/be/Another-Dio-Hyper.png",
+		tierId: 12_000,
+		type: "tank",
+		tier: "T",
+		attr: "cycles",
+	},
 ];
