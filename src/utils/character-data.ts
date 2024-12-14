@@ -692,4 +692,13 @@ export const characterData: Character[] = [
 		tier: "T",
 		attr: "cycles",
 	},
+	{
+		id: 11_078,
+		name: "Decanee (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/f/f9/Another-Decanee-Hyper.png",
+		tierId: 12_000,
+		type: "assault",
+		tier: "T",
+		attr: "judgment",
+	}
 ];
