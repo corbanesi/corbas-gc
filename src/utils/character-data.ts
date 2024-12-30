@@ -700,5 +700,14 @@ export const characterData: Character[] = [
 		type: "assault",
 		tier: "T",
 		attr: "judgment",
+	},
+	{
+		id: 11_079,
+		name: "Myst (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/a/a4/Another-Myst-Hyper.png",
+		tierId: 12_000,
+		type: "mage",
+		tier: "T",
+		attr: "life",
 	}
 ];
