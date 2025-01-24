@@ -709,5 +709,14 @@ export const characterData: Character[] = [
 		type: "mage",
 		tier: "T",
 		attr: "life",
+	},
+	{
+		id: 11_080,
+		name: "Uno (S)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/8/8c/IconHero-Unx-Hyper.png",
+		tierId: 12_000,
+		type: "ranged",
+		tier: "SR",
+		attr: "hellfire",
 	}
 ];
