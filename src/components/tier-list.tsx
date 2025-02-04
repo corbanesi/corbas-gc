@@ -40,7 +40,7 @@ export function TierList(props: Props) {
 
 	const [tierFilter, setTierFilter] = useState<CharTier[]>(["SR", "T"]);
 
-	const [attrFilter, setAttrFilter] = useState<CharAttr[]>(["cycles", "destruction", "hellfire", "judgment", "life"]);
+	const [attrFilter, setAttrFilter] = useState<CharAttr[]>(["cycle", "ruin", "retribution", "balance", "life"]);
 
 	useEffect(() => {
 		loadLocalTierList();

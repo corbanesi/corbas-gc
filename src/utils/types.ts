@@ -20,7 +20,7 @@ type CharType = "assault" | "tank" | "mage" | "support" | "ranged";
 
 type CharTier = "SR" | "T";
 
-type CharAttr = "hellfire" | "judgment" | "life" | "destruction" | "cycles";
+type CharAttr = "retribution" | "balance" | "life" | "ruin" | "cycle";
 
 type TypeData = {
 	id: number;
