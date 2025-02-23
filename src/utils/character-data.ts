@@ -727,5 +727,14 @@ export const characterData: Character[] = [
 		type: "mage",
 		tier: "SR",
 		attr: "balance",
+	},
+	{
+		id: 11_082,
+		name: "Ai (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/f/fe/Another-Ai-Hyper.png",
+		tierId: 12_000,
+		type: "tank",
+		tier: "T",
+		attr: "life",
 	}
 ];
