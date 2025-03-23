@@ -736,5 +736,14 @@ export const characterData: Character[] = [
 		type: "tank",
 		tier: "T",
 		attr: "life",
+	},
+	{
+		id: 11_083,
+		name: "Mayden (T)",
+		image: "https://static.wikia.nocookie.net/grandchase/images/9/97/Another-Mayden-Hyper.png",
+		tierId: 12_000,
+		type: "support",
+		tier: "T",
+		attr: "balance",
 	}
 ];
